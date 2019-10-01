@@ -13,7 +13,6 @@ while (True):
     disciplina['nota'] = int(input())
     disciplina['situacao'] = input().strip().upper()
     disciplinas.append(disciplina)
-    disciplina = disciplina.copy()
     if disciplina['situacao'] in "ARF":
         if disciplina['cargaHoraria'] in [33, 50, 67, 83]:
             somaDaNota += disciplina['cargaHoraria'] * disciplina['nota']
@@ -22,4 +21,4 @@ if (somaCH == 0):
     print("entrada invalida")
 else:
     CRE = somaDaNota/somaCH
-    print("{:.2f}".format(round(CRE)))
+    print("{:.2f}".format(CRE))
