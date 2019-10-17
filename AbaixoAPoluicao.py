@@ -17,5 +17,5 @@ while (numeroCarros != 999):
             casasMultadas = 0
             multaArrecadada = 0
 
-print(multaArrecadada)
+print('{:.2}'.format(multaArrecadada))
 print(casasMultadas)
