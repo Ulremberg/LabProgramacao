@@ -35,20 +35,14 @@ def bissexto(entrada):
 def mensagem(entrada):
     for i in range(len(entrada)):
         if entrada[i] < 1000:
-            print('{}'.format(invalido))
-        elif entrada[i] > 2019 and entrada[i] % 100 != 0 and entrada[i] % 4 == 0 or entrada[i] % 400 == 0:
-            print('O ano {} serah bissexto'.format(entrada[i]))
+            print('Ano invalido')
         elif entrada[i] < 2019 and entrada[i] % 100 != 0 and entrada[i] % 4 == 0 or entrada[i] % 400 == 0:
             print('O ano {} foi bissexto'.format(entrada[i]))
+        elif entrada[i] > 2019 and entrada[i] % 100 != 0 and entrada[i] % 4 == 0 or entrada[i] % 400 == 0:
+            print('O ano {} serah bissexto'.format(entrada[i]))
         else:
             print('O ano {} NAO eh bissexto'.format(entrada[i]))
 
 entrada = list(map(int,input().split()))
 
-print(mensagem(entrada))
-
-# ano = int(input('Digite o ano: '))
-# if ano % 100 != 0 and ano % 4 == 0 or ano % 400 == 0:
-#     print('É um ano bissexto')
-# else:
-#     print('Não é bissexto')
+mensagem(entrada)
