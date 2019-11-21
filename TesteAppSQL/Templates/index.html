@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste SQL</title>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<h1 style="text-align:center;"><a href="http://www.progesti.ufrpe.br/br/restaurante/o-restaurante">Cardápio Vegetariano</a></h1>
+    	<div class="box">
+  			<h1>Cadastro</h1>
+  			<form action="/" method="post">
+    			<input type="text" name="username" id="username" placeholder="Nome Completo" required/>
+    			<input type="submit" class="button" value="Cadastrar"/>
+  			</form>
+		</div>
+
+    <div class="footer">
+      <h5>Teste para Programação 1</h5>
+    </div>
+
+    {%if users%}
+    <div class="users" style="margin-left:20%">
+      <h2>Registered Users List</h2>
+      <table style="width:100%;">
+        {%for user in users%}
+          <tr>
+            <td>{{user[0]}}</td>
+          </tr>
+        {%endfor%}
+      </table>
+    </div>
+    {%endif%}
+
+</body>
+</html>
