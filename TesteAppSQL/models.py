@@ -1,14 +1,15 @@
 import sqlite3 as sql
 
-def insertUser(username):
+
+def insert_user(username):
     con = sql.connect("database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO users (username) VALUES (?,?)", (username))
+    cur.execute("INSERT INTO users (username) VALUES (?,?)"(username))
     con.commit()
     con.close()
 
 
-def retrieveUsers():
+def retrieve_users():
     con = sql.connect("database.db")
     cur = con.cursor()
     cur.execute("SELECT username FROM users")

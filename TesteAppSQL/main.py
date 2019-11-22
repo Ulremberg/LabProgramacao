@@ -10,8 +10,8 @@ app = Flask(__name__)
 def home():
     if request.method == 'POST':
         username = request.form['username']
-        dbHandler.insertUser(username)
-        users = dbHandler.retrieveUsers()
+        dbHandler.insert_user(username)
+        users = dbHandler.retrieve_users()
         return render_template('index.html', users=users)
     else:
         return render_template('index.html')
