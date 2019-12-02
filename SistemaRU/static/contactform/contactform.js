@@ -35,6 +35,12 @@ jQuery(document).ready(function($) {
             }
             break;
 
+          case 'minlenandmaxlen':
+            if (i.val().length < parseInt(exp)) or (i.val().length > parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+
           case 'email':
             if (!emailExp.test(i.val())) {
               ferror = ierror = true;
@@ -81,6 +87,12 @@ jQuery(document).ready(function($) {
 
           case 'minlen':
             if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlenandmaxlen':
+            if (i.val().length < parseInt(exp)) or (i.val().length > parseInt(exp)) {
               ferror = ierror = true;
             }
             break;
